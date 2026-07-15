@@ -8,14 +8,20 @@ import Social from "./Social";
 const ProfileCard = () => {
   return (
     // container
-    <div className="border-foreground  mx-auto mt-4 max-w-[95%]">
+    <div className="border-foreground bg-surface  mx-auto mt-4 max-w-[95%]">
       {/* top container */}
       <div className="flex gap-3 border-2">
         {/* Image */}
         <div className="relative  w-70 min-h-fit">
+          {/* Availability */}
+
+          <div className="w-fit h-fit px-2 py-0.5 font-medium text-xs bg-surface absolute top-1 left-1.5 z-3 border-2 border-foreground flex gap-1 items-center font-mono ">
+            <div className="w-1.5 h-1.5 bg-accent rounded-full"/><span>open</span>
+          </div>
+
           <Image
             src={"/pictures/profile.png"}
-            className="object-cover grayscale-40"
+            className="object-cover grayscale-50"
             fill
             alt="Mahfuz Redwan"
           />
@@ -85,7 +91,6 @@ const ProfileCard = () => {
                 className=""
                 href="https://github.com/Mahred1"
               />
-             
             </div>
           </div>
         </div>
