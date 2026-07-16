@@ -1,10 +1,10 @@
-import Button from "./_components/Button";
-import ProfileCard from "./_components/Profile/ProfileCard";
+import ProfileCardVertical from "./_components/Profile/ProfileCardVertical";
+
 
 export default function Home() {
   return (
     <>
-      <ProfileCard />
+      <ProfileCardVertical />
     </>
   );
 }

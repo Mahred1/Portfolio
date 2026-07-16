@@ -7,14 +7,14 @@ import Social from "./Social";
 const ProfileCard = () => {
   return (
     // container
-    <div className="border-foreground bg-surface mx-2 mt-2 min-w-[95%] sm:mx-auto lg:hidden">
+    <div className="border-foreground bg-surface mx-2 mt-3 min-w-[95%] sm:mx-auto lg:hidden">
       {/* top container */}
       <div className="flex gap-3 border-2">
         {/* Image */}
         <div className="relative w-35 sm:w-35">
           {/* Availability */}
 
-          <div className="bg-surface border-foreground absolute top-1 left-1 z-3 flex h-fit w-fit items-center gap-1 border-2 px-2 py-0.5 font-mono text-xs font-medium sm:left-1.5">
+          <div className="bg-surface border-foreground absolute top-1 left-1 z-3 flex h-fit w-fit items-center gap-2 border-2 px-2 py-0.5 font-mono text-xs font-medium sm:left-1.5">
             <div className="bg-accent h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 md:h-2.5 md:w-2.5" />
             <span className="sm:text-sm md:text-base">open</span>
           </div>
