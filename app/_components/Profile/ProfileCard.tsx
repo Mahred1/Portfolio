@@ -12,11 +12,12 @@ const ProfileCard = () => {
       {/* top container */}
       <div className="flex gap-3 border-2">
         {/* Image */}
-        <div className="relative  w-70 min-h-fit">
+        <div className="relative  w-35 sm:w-35">
           {/* Availability */}
 
           <div className="w-fit h-fit px-2 py-0.5 font-medium text-xs bg-surface absolute top-1 left-1.5 z-3 border-2 border-foreground flex gap-1 items-center font-mono ">
-            <div className="w-1.5 h-1.5 bg-accent rounded-full"/><span>open</span>
+            <div className="w-1.5 h-1.5 bg-accent rounded-full" />
+            <span>open</span>
           </div>
 
           <Image
@@ -27,24 +28,27 @@ const ProfileCard = () => {
           />
         </div>
         {/* content */}
-        <div className="text-sm flex flex-col gap-3 pt-2 pb-3">
+        <div className="text-sm flex flex-col justify-center  gap-4 pt-2 pb-3 ">
           {/* headelines & description */}
-          <div className="flex flex-col gap-0">
-            <p className="font-mono text-sm">{"//Engineer .  01"}</p>
-            <h2 className="font-bold text-lg font-inter">Mahfuz Redwan</h2>
-            <p>
+          <div className="flex flex-col gap-1">
+            <p className="font-mono text-sm tracking-tight ">
+              {"//Engineer .  01"}
+            </p>
+            <h2 className="font-bold text-xl sm:text-2xl font-inter">Mahfuz Redwan</h2>
+            <p className="sm:max-w-[350] sm:text-base sm:leading-5 ">
               Full-stack developer building fast web products and automated
               workflows.
             </p>
           </div>
 
           {/* location*/}
-          <div className="font-mono text-[11px] flex gap-1 items-center">
+          <div className="font-mono text-[11px] sm:text-[14px] flex gap-1 items-center">
             <Image
               src={"/icons/map-pin.svg"}
               width={12}
               height={12}
               alt="location"
+              className="sm:w-3.5"
             />
             <span>Adiss Ababa,ET - UTC+3</span>
           </div>
