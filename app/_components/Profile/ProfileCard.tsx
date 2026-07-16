@@ -1,116 +1,66 @@
 import React from "react";
 import Button from "../Button";
 import Image from "next/image";
-import Link from "next/link";
 import ProfileStat from "./ProfileStat";
 import Social from "./Social";
 
 const ProfileCard = () => {
   return (
     // container
-    <div className="border-foreground bg-surface  mx-auto mt-4 max-w-[95%]">
+    <div className="border-foreground bg-surface mx-2 mt-2 min-w-[95%] sm:mx-auto lg:hidden">
       {/* top container */}
       <div className="flex gap-3 border-2">
         {/* Image */}
-        <div className="relative  w-35 sm:w-35">
+        <div className="relative w-35 sm:w-35">
           {/* Availability */}
 
-          <div className="w-fit h-fit px-2 py-0.5 font-medium text-xs bg-surface absolute top-1 left-1.5 z-3 border-2 border-foreground flex gap-1 items-center font-mono ">
-            <div className="w-1.5 h-1.5 bg-accent rounded-full" />
-            <span>open</span>
+          <div className="bg-surface border-foreground absolute top-1 left-1 z-3 flex h-fit w-fit items-center gap-1 border-2 px-2 py-0.5 font-mono text-xs font-medium sm:left-1.5">
+            <div className="bg-accent h-1.5 w-1.5 rounded-full sm:h-2 sm:w-2 md:h-2.5 md:w-2.5" />
+            <span className="sm:text-sm md:text-base">open</span>
           </div>
 
-          <Image
-            src={"/pictures/profile.png"}
-            className="object-cover grayscale-50"
-            fill
-            alt="Mahfuz Redwan"
-          />
+          <Image src={"/pictures/profile.png"} className="object-cover grayscale-50" fill alt="Mahfuz Redwan" />
         </div>
         {/* content */}
-        <div className="text-sm flex flex-col justify-center  gap-4 pt-2 pb-3 ">
+        <div className="flex flex-col justify-center gap-4 pt-2 pb-3 text-sm md:pr-2">
           {/* headelines & description */}
           <div className="flex flex-col gap-1">
-            <p className="font-mono text-sm tracking-tight ">
-              {"//Engineer .  01"}
-            </p>
-            <h2 className="font-bold text-xl sm:text-2xl font-inter">Mahfuz Redwan</h2>
-            <p className="sm:max-w-[350] sm:text-base sm:leading-5 ">
-              Full-stack developer building fast web products and automated
-              workflows.
-            </p>
+            <p className="font-mono text-sm tracking-tight">{"//Engineer .  01"}</p>
+            <h2 className="font-inter text-xl font-bold sm:text-2xl md:text-2xl">Mahfuz Redwan</h2>
+            <p className="text-base sm:max-w-[350] sm:text-base sm:leading-5 md:max-w-full md:text-lg">Full-stack developer building fast web products and automated workflows.</p>
           </div>
 
           {/* location*/}
-          <div className="font-mono text-[11px] sm:text-[14px] flex gap-1 items-center">
-            <Image
-              src={"/icons/map-pin.svg"}
-              width={12}
-              height={12}
-              alt="location"
-              className="sm:w-3.5"
-            />
+          <div className="flex items-center gap-1 font-mono text-sm sm:text-[14px] md:text-base">
+            <Image src={"/icons/map-pin.svg"} width={14} height={14} alt="location" className="sm:w-3.5 md:w-4" />
             <span>Adiss Ababa,ET - UTC+3</span>
           </div>
 
           {/* buttons & social links */}
-          <div className=" flex flex-wrap gap-2 items-center">
+          <div className="flex flex-wrap items-center gap-2 md:gap-3">
             {/* buttons */}
             <div className="flex gap-2">
-              <Button
-                className="text-xs"
-                type="primary"
-                src="icons/mail.svg"
-                alt="contact"
-              >
+              <Button className="text-xs md:text-base" type="primary" src="icons/mail.svg" alt="contact">
                 Contact
               </Button>
-              <Button
-                className="text-xs"
-                type="secondary"
-                src="icons/download.svg"
-                alt="contact"
-              >
+              <Button className="text-xs md:text-base" type="secondary" src="icons/download.svg" alt="contact">
                 CV
               </Button>
             </div>
 
             {/* social links */}
             <div className="flex">
-              <Social
-                src="/icons/github.svg"
-                alt="github"
-                className="border-r-0"
-                href="https://github.com/Mahred1"
-              />
-              <Social
-                src="/icons/linkedin.svg"
-                alt="linkedin"
-                className="border-r-0"
-                href="https://www.linkedin.com/in/m-redwan-265b3234a/"
-              />
-              <Social
-                src="/icons/twitter.svg"
-                alt="twitter"
-                className=""
-                href="https://github.com/Mahred1"
-              />
+              <Social src="/icons/github.svg" alt="github" className="border-r-0" href="https://github.com/Mahred1" />
+              <Social src="/icons/linkedin.svg" alt="linkedin" className="border-r-0" href="https://www.linkedin.com/in/m-redwan-265b3234a/" />
+              <Social src="/icons/twitter.svg" alt="twitter" className="" href="https://github.com/Mahred1" />
             </div>
           </div>
         </div>
       </div>
 
-      <div className="flex w-full justify-between ">
-        <ProfileStat
-          className="border-t-0 border-r-0"
-          value="47"
-          title="Projects"
-        />
-        <ProfileStat
-          className="border-t-0 border-r-0"
-          value="34"
-          title="repos"
-        />
+      <div className="flex w-full justify-between">
+        <ProfileStat className="border-t-0 border-r-0" value="47" title="Projects" />
+        <ProfileStat className="border-t-0 border-r-0" value="34" title="repos" />
         <ProfileStat className="border-t-0" value="20" title="Projects" />
       </div>
     </div>
