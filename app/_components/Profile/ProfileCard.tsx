@@ -19,7 +19,7 @@ const ProfileCard = () => {
             <span className="sm:text-sm md:text-base">open</span>
           </div>
 
-          <Image src={"/pictures/profile.png"} className="object-cover grayscale-50" fill alt="Mahfuz Redwan" />
+          <Image src={"/pictures/profile.png"} className="object-cover grayscale-100" fill alt="Mahfuz Redwan" />
         </div>
         {/* content */}
         <div className="flex flex-col justify-center gap-4 pt-2 pb-3 text-sm md:pr-2">

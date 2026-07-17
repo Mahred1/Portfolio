@@ -19,7 +19,7 @@ const ProfileCardVertical = () => {
             <span className="text-base">Available</span>
           </div>
 
-          <Image src={"/pictures/profile.png"} className="z-0 object-cover grayscale-75" fill alt="Mahfuz Redwan" />
+          <Image src={"/pictures/profile.png"} className="z-0 object-cover grayscale-100" fill alt="Mahfuz Redwan" />
         </div>
         {/* content */}
         <div className="flex flex-col justify-center gap-5 px-3 pt-2 pb-5 text-sm">

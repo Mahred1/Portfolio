@@ -18,6 +18,7 @@
   --color-secondary: var(--secondary);
   --font-inter: var(--font-inter);
   --font-mono: var(--font-mono);
+  --breakpoint-xs: 430px;
   
 }
 
