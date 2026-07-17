@@ -26,21 +26,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`${inter.variable} ${mono.variable} h-full antialiased`}
-    >
+    <html lang="en" className={`${inter.variable} ${mono.variable} h-full antialiased`}>
       <body className="flex min-h-full flex-col">
-        <div className="mx-auto flex min-w-[95%] flex-col items-center gap-4 lg:max-w-350 lg:flex-row lg:items-start lg:justify-center">
+        <div className="mx-auto flex min-w-[95%] flex-col items-center gap-4 lg:max-w-350 lg:min-w-fit lg:flex-row lg:items-start lg:justify-center">
           <div className="min-w-[95%] overflow-auto lg:sticky lg:top-2.5 lg:h-dvh lg:min-w-fit">
             <ProfileCard />
             <ProfileCardVertical />
           </div>
-          <div className="mt-2 max-w-full ">
-            
-             <Navbar /> 
-            
-            
+          <div className="mt-2 flex w-full flex-col items-center">
+            <Navbar />
+
             {children}
           </div>
         </div>
