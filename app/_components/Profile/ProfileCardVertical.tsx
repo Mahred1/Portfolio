@@ -7,7 +7,7 @@ import Button from "../Button";
 const ProfileCardVertical = () => {
   return (
     // container
-    <div className="border-foreground bg-surface mx-2 mt-3 hidden max-w-74 flex-col lg:flex">
+    <div className="border-foreground bg-surface mx-2 mt-3 hidden max-w-74 flex-col overflow-y-auto lg:flex">
       {/* top container */}
       <div className="flex flex-col gap-3 border-2">
         {/* Image */}
@@ -26,8 +26,10 @@ const ProfileCardVertical = () => {
           {/* headelines & description */}
           <div className="flex flex-col gap-0">
             <p className="font-mono text-base tracking-tight text-gray-500">{"//Engineer .  01"}</p>
-            <div className="flex flex-col gap-1"><h2 className="font-inter text-2xl font-bold">Mahfuz Redwan</h2>
-            <p className="text-base leading-6 text-gray-500">Full-stack developer building fast web products and automated workflows.</p></div>
+            <div className="flex flex-col gap-1">
+              <h2 className="font-inter text-2xl font-bold">Mahfuz Redwan</h2>
+              <p className="text-base leading-6 text-gray-500">Full-stack developer building fast web products and automated workflows.</p>
+            </div>
           </div>
 
           {/* location*/}
@@ -58,9 +60,9 @@ const ProfileCardVertical = () => {
       </div>
       {/* social links */}
       <div className="flex w-full">
-        <Social src="/icons/github.svg" alt="github" className="border-r-0 border-t-0 w-full flex justify-center py-3 " href="https://github.com/Mahred1" />
-        <Social src="/icons/linkedin.svg" alt="linkedin" className="border-r-0 border-t-0 w-full flex justify-center py-3 " href="https://www.linkedin.com/in/m-redwan-265b3234a/" />
-        <Social src="/icons/twitter.svg" alt="twitter" className="border-t-0 w-full flex justify-center py-3 " href="https://github.com/Mahred1" />
+        <Social src="/icons/github.svg" alt="github" className="flex w-full justify-center border-t-0 border-r-0 py-3" href="https://github.com/Mahred1" />
+        <Social src="/icons/linkedin.svg" alt="linkedin" className="flex w-full justify-center border-t-0 border-r-0 py-3" href="https://www.linkedin.com/in/m-redwan-265b3234a/" />
+        <Social src="/icons/twitter.svg" alt="twitter" className="flex w-full justify-center border-t-0 py-3" href="https://github.com/Mahred1" />
       </div>
     </div>
   );
