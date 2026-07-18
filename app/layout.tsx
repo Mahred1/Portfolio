@@ -4,7 +4,7 @@ import { JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 import ProfileCard from "./_components/Profile/ProfileCard";
 import ProfileCardVertical from "./_components/Profile/ProfileCardVertical";
-import Navbar from "./_components/Navigation/Navbar";
+import Navbar from "./_components/navigation/Navbar";
 
 const inter = Inter({
   variable: "--font-inter",

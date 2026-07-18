@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Button from "./_components/Button";
+import FeaturedProject from "./_components/projects/FeaturedProject";
 
 export default function Home() {
   const date = new Date();
@@ -48,16 +49,20 @@ export default function Home() {
 
       <section className="mt-6 px-4">
         {/* header */}
-        <div className="flex flex-col gap-2">
+        <div className="flex flex-col gap-1">
           <div className="flex gap-0 flex-col">
             <p className="font-mono text-sm text-gray-600">01</p>
             <h1 className="text-2xl font-bold font-inter">Featured Projects</h1>
           </div>
 
-          <div className="flex items-end justify-between boder-foreground border-b-2 pb-2">
-            <p className="text-sm text-gray-600">A small selection. Full archive in the Projects tab.</p>
+          <div className="flex items-end justify-between boder-foreground border-b-2 pb-2.5">
+            <p className="text-sm text-gray-600">
+              A small selection. Full archive in the Projects tab.
+            </p>
             <Link className="flex gap-1 items-end" href={"/projects"}>
-              <span className="uppercase text-sm font-medium font-mono">All work</span>
+              <span className="uppercase text-sm font-medium font-mono">
+                All work
+              </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -76,6 +81,22 @@ export default function Home() {
             </Link>
           </div>
         </div>
+
+        {/* container */}
+        <div className="mt-4">
+          <FeaturedProject />
+        </div>
+
+        vvv
+
+
+        vvv
+
+
+
+
+
+        v
       </section>
     </div>
   );
