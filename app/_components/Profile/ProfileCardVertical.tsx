@@ -35,7 +35,7 @@ const ProfileCardVertical = () => {
           {/* location*/}
           <div className="flex items-center gap-1 font-mono text-base">
             <Image src={"/icons/map-pin.svg"} width={14} height={14} alt="location" className="w-4" />
-            <span className="text-gray-700">Adiss Ababa,ET - UTC+3</span>
+            <span className="text-gray-500">Adiss Ababa,ET - UTC+3</span>
           </div>
         </div>
       </div>

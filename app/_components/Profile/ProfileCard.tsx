@@ -27,11 +27,11 @@ const ProfileCard = () => {
           <div className="flex flex-col gap-1">
             <p className="font-mono text-sm tracking-tight">{"//Engineer .  01"}</p>
             <h2 className="font-inter text-xl font-bold sm:text-2xl md:text-2xl">Mahfuz Redwan</h2>
-            <p className="text-base sm:max-w-[350] sm:text-base sm:leading-5 md:max-w-full md:text-lg">Full-stack developer building fast web products and automated workflows.</p>
+            <p className="text-base sm:max-w-[350] sm:text-base sm:leading-5 md:max-w-full md:text-lg text-gray-500">Full-stack developer building fast web products and automated workflows.</p>
           </div>
 
           {/* location*/}
-          <div className="flex items-center gap-1 font-mono text-sm sm:text-[14px] md:text-base">
+          <div className="flex items-center gap-1 font-mono text-sm sm:text-[14px] md:text-base text-gray-500">
             <Image src={"/icons/map-pin.svg"} width={14} height={14} alt="location" className="sm:w-3.5 md:w-4" />
             <span>Adiss Ababa,ET - UTC+3</span>
           </div>
