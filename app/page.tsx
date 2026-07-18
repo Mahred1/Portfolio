@@ -89,17 +89,6 @@ export default function Home() {
           <FeaturedProject />
           <FeaturedProject />
         </div>
-
-        vvv
-
-
-        vvv
-
-
-
-
-
-        v
       </section>
     </div>
   );

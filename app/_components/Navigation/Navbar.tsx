@@ -11,7 +11,8 @@ const Navbar = () => {
     inactive: "px-3 py-1.5 font-md  text-base hover:bg-secondary",
   };
   return (
-    <div className="bg-surface sticky top-4 lg:mt-10 border-foreground flex items-center gap-4 border-2 px-2 py-2 md:w-md md:justify-between">
+    <nav className="flex justify-center  min-w-full sticky top-4 ">
+      <div className="bg-surface opacity-90   border-foreground flex items-center gap-4 border-2 px-2 py-2 md:w-md md:justify-between">
       <div className="flex items-center gap-4 md:gap-6">
         <Link className={cn("", path == "/" ? styles.active : styles.inactive)} href={"/"}>
           Home
@@ -36,6 +37,8 @@ const Navbar = () => {
         </svg>
       </Link>
     </div>
+    </nav>
+    
   );
 };
 
