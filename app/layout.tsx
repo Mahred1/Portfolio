@@ -16,7 +16,7 @@ const mono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Mahfuz Redwan",
+  title: "Mahfuz Redwan - Fullstack Developer",
   description: "Fullstack Developer",
 };
 
