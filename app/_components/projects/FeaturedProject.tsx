@@ -1,8 +1,9 @@
+import Link from "next/link";
 import React from "react";
 
 const FeaturedProject = () => {
   return (
-    <div className=" bg-surface pt-3 pb-2 px-4 border-2 border-foreground flex items-start justify-start gap-4 hover:bg-secondary transition-colors ease-in">
+    <Link href={'/projects/id'} className=" group bg-surface pt-3 pb-2 px-4 border-2 border-foreground flex items-start justify-start gap-4 hover:bg-secondary transition-colors ease-in">
       <div className="bg-secondary w-14 h-14 border border-accent text-center">
         
       </div>
@@ -20,7 +21,7 @@ const FeaturedProject = () => {
             strokeWidth="1"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right mt-1"
+            className="lucide group-hover:stroke-accent group-hover:scale-120  transition-transform ease-in lucide-arrow-up-right-icon lucide-arrow-up-right mt-1"
           >
             <path d="M7 7h10v10" />
             <path d="M7 17 17 7" />
@@ -31,7 +32,7 @@ const FeaturedProject = () => {
           <p className="text-gray-600 text-sm">Internal accounting platform serving 12 finance teams.</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
