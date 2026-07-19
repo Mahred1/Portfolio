@@ -4,6 +4,8 @@ import FeaturedProject from "./_components/projects/FeaturedProject";
 import RecentReview from "./_components/reviews/RecentReview";
 import ExperienceCard from "./_components/ExperienceCard";
 import EducationCard from "./_components/EducationCard";
+import { Certificate } from "crypto";
+import CertificateCard from "./_components/CertificateCard";
 
 export default function Home() {
   const date = new Date();
@@ -202,10 +204,10 @@ export default function Home() {
 
         {/* container */}
         <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
+          <CertificateCard/>
+          <CertificateCard/>
+          <CertificateCard/>
+          <CertificateCard/>
         </div>
       </section>
     </div>
