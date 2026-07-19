@@ -1,12 +1,29 @@
-import React from "react";
+import ProjectFilter from "../_components/ProjectFIlter";
 
-const Page = () => {
+const Page = async ({
+  searchParams,
+}: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+}) => {
+  const currentFilter = (await searchParams).filter || "all";
+
   return (
-    <div className="mt-6 px-5">
-      <header>
+    <div className="mt-6 pb-16 px-5">
+      {/* Header Section */}
 
-      </header>
-      
+      <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-3">
+        <p className="font-mono text-xs text-gray-600">01</p>
+        <div className="flex flex-col gap-0">
+          <h1 className="font-inter text-2xl font-semibold">Projects</h1>
+          <span className="text-sm text-gray-600">
+            6 entries · filtered by {currentFilter}
+          </span>
+        </div>
+      </div>
+
+      {/* Filter */}
+
+      <ProjectFilter />
     </div>
   );
 };

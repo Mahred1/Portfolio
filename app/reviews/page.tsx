@@ -3,7 +3,7 @@ import ReviewCard from "../_components/reviews/ReviewCard";
 
 const Page = () => {
   return (
-    <div className="mt-6 px-5">
+    <div className="mt-6 pb-16 px-5">
       {/* Header Section */}
 
       <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-3">
@@ -40,11 +40,11 @@ const Page = () => {
 
       {/* Reviews */}
 
-      <div className="mt-8 grid gap-4  grid-cols-[repeat(auto-fit,minmax(300px,1fr))] ">
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
-        <ReviewCard/>
+      <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
+        <ReviewCard />
       </div>
     </div>
   );
