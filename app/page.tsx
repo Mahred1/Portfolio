@@ -3,6 +3,7 @@ import Button from "./_components/Button";
 import FeaturedProject from "./_components/projects/FeaturedProject";
 import RecentReview from "./_components/reviews/RecentReview";
 import ExperienceCard from "./_components/ExperienceCard";
+import EducationCard from "./_components/EducationCard";
 
 export default function Home() {
   const date = new Date();
@@ -110,6 +111,28 @@ export default function Home() {
           <ExperienceCard />
           <ExperienceCard />
           <ExperienceCard />
+        </ul>
+      </section>
+
+      {/* Education Section */}
+
+      <section className="mt-10 px-4">
+        {/* header */}
+        <div className="flex flex-col gap-1">
+          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
+            <p className="font-mono text-xs text-gray-600">05</p>
+            <div className="flex flex-col gap-0">
+              <h1 className="font-inter text-2xl font-bold">Education</h1>
+              <span className="text-sm text-gray-600">Formal schooling and exchanges.</span>
+            </div>
+          </div>
+        </div>
+
+        {/* container */}
+        <ul className="mt-5 flex flex-col gap-4">
+          <EducationCard/>
+          <EducationCard/>
+          <EducationCard/>
         </ul>
       </section>
     </div>
