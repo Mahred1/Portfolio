@@ -18,16 +18,30 @@ export default function Home() {
         </div>
         <div className="flex flex-col gap-2">
           <div className="text-foreground text-4xl font-bold sm:text-5xl">
-            I build web products <br /> that <span className="text-accent">do the work </span> for people.
+            I build web products <br /> that{" "}
+            <span className="text-accent">do the work </span> for people.
           </div>
-          <p className="max-w-[620] text-lg text-gray-600">I&apos;m a full-stack developer who treats engineering as a craft and shipping as a habit. For the last three years I&apos;ve helped startups and small teams take ideas from whiteboard to production.</p>
+          <p className="max-w-[620] text-lg text-gray-600">
+            I&apos;m a full-stack developer who treats engineering as a craft
+            and shipping as a habit. For the last three years I&apos;ve helped
+            startups and small teams take ideas from whiteboard to production.
+          </p>
         </div>
         <div>
           <div className="flex items-center gap-3">
-            <Button className="flex-row-reverse justify-center px-3 py-1 text-base font-normal" type="primary" src="icons/mail.svg" alt="contact">
+            <Button
+              className="flex-row-reverse justify-center px-3 py-1 text-base font-normal"
+              type="primary"
+              src="icons/mail.svg"
+              alt="contact"
+            >
               See Projects
             </Button>
-            <Button className="text-md justify-center px-3 py-1" type="secondary" alt="contact">
+            <Button
+              className="text-md justify-center px-3 py-1"
+              type="secondary"
+              alt="contact"
+            >
               Read Reviews
             </Button>
           </div>
@@ -41,14 +55,29 @@ export default function Home() {
         <div className="flex flex-col gap-1">
           <div className="flex flex-col gap-0">
             <p className="font-mono text-xs text-gray-600">01</p>
-            <h1 className="font-inter text-2xl font-bold">Featured Projects</h1>
+            <h1 className="font-inter text-2xl font-semibold">Featured Projects</h1>
           </div>
 
           <div className="boder-foreground flex items-end justify-between border-b-2 pb-2.5">
-            <p className="text-sm text-gray-600">A small selection. Full archive in the Projects tab.</p>
+            <p className="text-sm text-gray-600">
+              A small selection. Full archive in the Projects tab.
+            </p>
             <Link className="flex items-end gap-1" href={"/projects"}>
-              <span className="font-mono text-sm font-medium uppercase">All work</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right mt-1">
+              <span className="font-mono text-sm font-medium uppercase">
+                All work
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right mt-1"
+              >
                 <path d="M7 7h10v10" />
                 <path d="M7 17 17 7" />
               </svg>
@@ -73,11 +102,24 @@ export default function Home() {
           <div className="boder-foreground flex items-end justify-between border-b-2 pb-2.5">
             <div className="flex flex-col gap-0">
               <p className="font-mono text-xs text-gray-600">02</p>
-              <h1 className="font-inter text-2xl font-bold">Recent Reviews</h1>
+              <h1 className="font-inter text-2xl font-semibold">Recent Reviews</h1>
             </div>
             <Link className="flex items-end gap-1" href={"/projects"}>
-              <span className="font-mono text-sm font-medium uppercase">All reviews</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right mt-1">
+              <span className="font-mono text-sm font-medium uppercase">
+                All reviews
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right mt-1"
+              >
                 <path d="M7 7h10v10" />
                 <path d="M7 17 17 7" />
               </svg>
@@ -100,8 +142,10 @@ export default function Home() {
           <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
             <p className="font-mono text-xs text-gray-600">04</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-bold">Experience</h1>
-              <span className="text-sm text-gray-600">Three years of shipping. Most recent first.</span>
+              <h1 className="font-inter text-2xl font-semibold">Experience</h1>
+              <span className="text-sm text-gray-600">
+                Three years of shipping. Most recent first.
+              </span>
             </div>
           </div>
         </div>
@@ -122,18 +166,47 @@ export default function Home() {
           <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
             <p className="font-mono text-xs text-gray-600">05</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-bold">Education</h1>
-              <span className="text-sm text-gray-600">Formal schooling and exchanges.</span>
+              <h1 className="font-inter text-2xl font-semibold">Education</h1>
+              <span className="text-sm text-gray-600">
+                Formal schooling and exchanges.
+              </span>
             </div>
           </div>
         </div>
 
         {/* container */}
         <ul className="mt-5 flex flex-col gap-4">
-          <EducationCard/>
-          <EducationCard/>
-          <EducationCard/>
+          <EducationCard />
+          <EducationCard />
+          <EducationCard />
         </ul>
+      </section>
+
+      {/* Certificates Section */}
+
+      <section className="mt-10 px-4">
+        {/* header */}
+        <div className="flex flex-col gap-1">
+          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
+            <p className="font-mono text-xs text-gray-600">06</p>
+            <div className="flex flex-col gap-0">
+              <h1 className="font-inter text-2xl font-semibold">
+                Certificates
+              </h1>
+              <span className="text-sm text-gray-600">
+                Verified credentials and coursework. click to view.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* container */}
+        <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
+          <FeaturedProject />
+          <FeaturedProject />
+          <FeaturedProject />
+          <FeaturedProject />
+        </div>
       </section>
     </div>
   );

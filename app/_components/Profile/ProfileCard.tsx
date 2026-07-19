@@ -26,7 +26,7 @@ const ProfileCard = () => {
           {/* headelines & description */}
           <div className="flex flex-col gap-1">
             <p className="font-mono text-sm tracking-tight">{"//Engineer .  01"}</p>
-            <h2 className="font-inter text-xl font-bold sm:text-2xl md:text-2xl">Mahfuz Redwan</h2>
+            <h2 className="font-inter text-xl font-semibold sm:text-2xl md:text-2xl">Mahfuz Redwan</h2>
             <p className="text-base sm:max-w-[350] sm:text-base sm:leading-5 md:max-w-full md:text-lg text-gray-500">Full-stack developer building fast web products and automated workflows.</p>
           </div>
 

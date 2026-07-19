@@ -27,7 +27,7 @@ const ProfileCardVertical = () => {
           <div className="flex flex-col gap-0">
             <p className="font-mono text-base tracking-tight text-gray-500">{"//Engineer .  01"}</p>
             <div className="flex flex-col gap-1">
-              <h2 className="font-inter text-2xl font-bold">Mahfuz Redwan</h2>
+              <h2 className="font-inter text-2xl font-semibold">Mahfuz Redwan</h2>
               <p className="text-base leading-6 text-gray-500">Full-stack developer building fast web products and automated workflows.</p>
             </div>
           </div>

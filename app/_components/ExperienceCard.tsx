@@ -2,7 +2,7 @@ import React from "react";
 
 const ExperienceCard = () => {
   return (
-    <li className="border-foreground flex border-2 px-4 py-6 gap-4">
+    <li className="border-foreground bg-surface flex border-2 px-4 py-6 gap-4">
       <div className="font-mono text-xs pr-16 ">
         <p>2024</p>
         <p className="text-gray-600 uppercase">- Present</p>

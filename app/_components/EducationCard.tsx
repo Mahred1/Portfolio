@@ -1,8 +1,8 @@
-import React from 'react'
+import React from "react";
 
 const EducationCard = () => {
   return (
-    <li className="border-foreground flex border-2 px-4 py-6 gap-4">
+    <li className="border-foreground bg-surface flex border-2 px-4 py-6 gap-4">
       <div className="font-mono text-xs pr-16 ">
         <p>2024</p>
         <p className="text-gray-600 uppercase">- Present</p>
@@ -31,15 +31,18 @@ const EducationCard = () => {
             </svg>
             <span className="text-sm">Adama, ET</span>
           </div>
-          <h2 className="font-inter text-lg font-semibold">M.Sc. Software Engineering</h2>
+          <h2 className="font-inter text-lg font-semibold">
+            M.Sc. Software Engineering
+          </h2>
           <p className="text-accent text-sm font-medium">ASTU</p>
         </div>
         <p className="text-gray-600 text-sm">
-          Specialised in distributed systems and human-computer interaction. Thesis on edge-first data sync.
+          Specialised in distributed systems and human-computer interaction.
+          Thesis on edge-first data sync.
         </p>
       </div>
     </li>
-  )
-}
+  );
+};
 
-export default EducationCard
+export default EducationCard;
