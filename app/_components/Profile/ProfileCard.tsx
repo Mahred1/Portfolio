@@ -31,7 +31,7 @@ const ProfileCard = () => {
           </div>
 
           {/* location*/}
-          <div className="flex items-center gap-1 font-mono text-sm sm:text-[14px] md:text-base text-gray-500">
+          <div className="flex items-center gap-1 font-mono text-sm sm:text-[14px]  text-gray-500">
             <Image src={"/icons/map-pin.svg"} width={14} height={14} alt="location" className="sm:w-3.5 md:w-4" />
             <span>Adiss Ababa,ET - UTC+3</span>
           </div>

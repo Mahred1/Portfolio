@@ -7,20 +7,20 @@ import React from "react";
 const Navbar = () => {
   const path = usePathname();
   const styles = {
-    active: "text-surface bg-foreground px-3 py-1.5 font-md text-base self-center",
-    inactive: "px-3 py-1.5 font-md  text-base hover:bg-secondary",
+    active: "text-surface bg-foreground px-3 py-1.5 font-md text-sm self-center",
+    inactive: "px-3 py-1.5 font-md  text-sm hover:bg-secondary",
   };
   return (
     <nav className="flex justify-center  min-w-full sticky top-4 ">
       <div className="bg-surface opacity-90   border-foreground flex items-center gap-4 border-2 px-2 py-2 md:w-md md:justify-between">
-      <div className="flex items-center gap-4 md:gap-6">
+      <div className="flex items-center gap-4 md:gap-6 ">
         <Link className={cn("", path == "/" ? styles.active : styles.inactive)} href={"/"}>
           Home
         </Link>
         <Link className={cn("", path == "/projects" ? styles.active : styles.inactive)} href={"/projects"}>
           Projects
         </Link>
-        <Link className={cn("", path == "/reviews" ? styles.active : styles.inactive)} href={""}>
+        <Link className={cn("", path == "/reviews" ? styles.active : styles.inactive)} href={"/reviews"}>
           Reviews
         </Link>
       </div>

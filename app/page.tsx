@@ -4,14 +4,14 @@ import FeaturedProject from "./_components/projects/FeaturedProject";
 import RecentReview from "./_components/reviews/RecentReview";
 import ExperienceCard from "./_components/ExperienceCard";
 import EducationCard from "./_components/EducationCard";
-import { Certificate } from "crypto";
 import CertificateCard from "./_components/CertificateCard";
+import AchieveentCard from "./_components/AchieveentCard";
 
 export default function Home() {
   const date = new Date();
   const year = date.getFullYear();
   return (
-    <div>
+    <div className="pb-15">
       {/* Hero Section */}
       <section className="mt-6 flex w-full flex-col items-start gap-5 px-4">
         {/* Date */}
@@ -60,7 +60,7 @@ export default function Home() {
             <h1 className="font-inter text-2xl font-semibold">Featured Projects</h1>
           </div>
 
-          <div className="boder-foreground flex items-end justify-between border-b-2 pb-2.5">
+          <div className="boder-foreground flex items-end justify-between border-b-2 pb-3">
             <p className="text-sm text-gray-600">
               A small selection. Full archive in the Projects tab.
             </p>
@@ -208,6 +208,33 @@ export default function Home() {
           <CertificateCard/>
           <CertificateCard/>
           <CertificateCard/>
+        </div>
+      </section>
+
+       {/* Certificates Section */}
+
+      <section className="mt-10 px-4">
+        {/* header */}
+        <div className="flex flex-col gap-1">
+          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-3">
+            <p className="font-mono text-xs text-gray-600">07</p>
+            <div className="flex flex-col gap-0">
+              <h1 className="font-inter text-2xl font-semibold">
+                Achievements
+              </h1>
+              <span className="text-sm text-gray-600">
+                Recognition, talks and milestones.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* container */}
+        <div className="mt-5">
+          <AchieveentCard className="" />
+          <AchieveentCard className="border-t-0" />
+          <AchieveentCard className="border-t-0" />
+          <AchieveentCard className="border-t-0" />
         </div>
       </section>
     </div>

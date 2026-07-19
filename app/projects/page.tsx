@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react";
 
 const Page = () => {
   return (
-    <div>Page</div>
-  )
-}
+    <div className="mt-6 px-5">
+      <header>
 
-export default Page
+      </header>
+      
+    </div>
+  );
+};
+
+export default Page;

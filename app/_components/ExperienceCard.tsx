@@ -21,7 +21,7 @@ const ExperienceCard = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              strokeWidth="2"
+              strokeWidth="1"
               strokeLinecap="round"
               strokeLinejoin="round"
               className="lucide w-4 h-4 lucide-briefcase-icon lucide-briefcase"
@@ -31,7 +31,7 @@ const ExperienceCard = () => {
             </svg>
             <span className="text-sm">Remote</span>
           </div>
-          <h2 className="font-inter text-lg font-semibold">Principal Engineer</h2>
+          <h2 className="font-inter text-base font-semibold">Principal Engineer</h2>
           <p className="text-accent text-sm font-medium">Northwind Labs</p>
         </div>
         <p className="text-gray-600 text-sm">

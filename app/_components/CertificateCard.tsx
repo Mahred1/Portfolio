@@ -3,7 +3,7 @@ import React from 'react'
 
 const CertificateCard = () => {
   return (
-     <Link href={""} target='_blank' className=" group bg-surface py-5 px-4 border-2 border-foreground flex items-start justify-start gap-6 hover:bg-secondary hover:border-accent transition-colors ease-in">
+     <Link href={""} target='_blank' className=" group bg-surface py-3 px-4 border-2 border-foreground flex items-start justify-start gap-6 hover:bg-secondary hover:border-accent transition-colors ease-in">
       <div className="bg-surface w-12 h-10  border-secondary border-2 text-center">
         
       </div>
