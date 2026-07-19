@@ -1,4 +1,5 @@
 import React from "react";
+import ReviewCard from "../_components/reviews/ReviewCard";
 
 const Page = () => {
   return (
@@ -13,32 +14,38 @@ const Page = () => {
         </div>
       </div>
 
-      <header className="bg-surface divide-foreground mt-5 flex  items-center border-2 font-mono">
-        <div className="border-r-2  xs:px-4 xs:py-4 flex h-full   flex-1 flex-col items-start gap-2 px-3 py-2">
+      <header className="bg-surface divide-foreground mt-6 flex items-center border-2 font-mono">
+        <div className="xs:px-4 xs:py-4 flex h-full flex-1 flex-col items-start gap-2 border-r-2 px-3 py-2">
           <p className="text-xs text-gray-600 uppercase">average</p>
-          <div className="flex items-baseline gap-1  ">
+          <div className="flex items-baseline gap-1">
             <p className="xs:text-3xl text-xl font-black sm:text-5xl">4.8</p>
             <p className="xs:text-sm text-xs text-gray-600">/5.0</p>
           </div>
         </div>
-        <div className="border-r-2 xs:px-4 xs:py-4 flex h-full   flex-1 flex-col items-start gap-2 px-3 py-2">
+        <div className="xs:px-4 xs:py-4 flex h-full flex-1 flex-col items-start gap-2 border-r-2 px-3 py-2">
           <p className="text-xs text-gray-600 uppercase">projects</p>
-          <div className="flex items-baseline gap-1  ">
+          <div className="flex items-baseline gap-1">
             <p className="xs:text-3xl text-xl font-black sm:text-5xl">47</p>
             <p className="xs:text-sm text-xs text-gray-600">shipped</p>
           </div>
         </div>
-        <div className="border-0 xs:px-4 xs:py-4 flex h-full   flex-1 flex-col items-start gap-2 px-3 py-2">
+        <div className="xs:px-4 xs:py-4 flex h-full flex-1 flex-col items-start gap-2 border-0 px-3 py-2">
           <p className="text-xs text-gray-600 uppercase">repeat</p>
-          <div className="flex items-baseline gap-1  ">
+          <div className="flex items-baseline gap-1">
             <p className="xs:text-3xl text-xl font-black sm:text-5xl">89%</p>
             <p className="xs:text-sm text-xs text-gray-600">clients</p>
           </div>
         </div>
-       
-        
-        
       </header>
+
+      {/* Reviews */}
+
+      <div className="mt-8 grid gap-4  grid-cols-[repeat(auto-fit,minmax(300px,1fr))] ">
+        <ReviewCard/>
+        <ReviewCard/>
+        <ReviewCard/>
+        <ReviewCard/>
+      </div>
     </div>
   );
 };
