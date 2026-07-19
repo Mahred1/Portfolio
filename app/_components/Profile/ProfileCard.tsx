@@ -40,10 +40,10 @@ const ProfileCard = () => {
           <div className="flex flex-wrap items-center gap-2 md:gap-3">
             {/* buttons */}
             <div className="flex gap-2">
-              <Button className="text-xs md:text-base" type="primary" src="icons/mail.svg" alt="contact">
+              <Button className="text-xs md:text-sm" type="primary" src="icons/mail.svg" alt="contact">
                 Contact
               </Button>
-              <Button className="text-xs md:text-base" type="secondary" src="icons/download.svg" alt="contact">
+              <Button className="text-xs md:text-sm" type="secondary" src="icons/download.svg" alt="contact">
                 CV
               </Button>
             </div>
