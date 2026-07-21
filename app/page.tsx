@@ -6,6 +6,7 @@ import ExperienceCard from "./_components/ExperienceCard";
 import EducationCard from "./_components/EducationCard";
 import CertificateCard from "./_components/CertificateCard";
 import AchieveentCard from "./_components/AchieveentCard";
+import StackCard from "./_components/StackCard";
 
 export default function Home() {
   const date = new Date();
@@ -57,7 +58,9 @@ export default function Home() {
         <div className="flex flex-col gap-1">
           <div className="flex flex-col gap-0">
             <p className="font-mono text-xs text-gray-600">01</p>
-            <h1 className="font-inter text-2xl font-semibold">Featured Projects</h1>
+            <h1 className="font-inter text-2xl font-semibold">
+              Featured Projects
+            </h1>
           </div>
 
           <div className="boder-foreground flex items-end justify-between border-b-2 pb-3">
@@ -88,7 +91,7 @@ export default function Home() {
         </div>
 
         {/* container */}
-        <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
+        <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3">
           <FeaturedProject />
           <FeaturedProject />
           <FeaturedProject />
@@ -104,7 +107,9 @@ export default function Home() {
           <div className="boder-foreground flex items-end justify-between border-b-2 pb-2.5">
             <div className="flex flex-col gap-0">
               <p className="font-mono text-xs text-gray-600">02</p>
-              <h1 className="font-inter text-2xl font-semibold">Recent Reviews</h1>
+              <h1 className="font-inter text-2xl font-semibold">
+                Recent Reviews
+              </h1>
             </div>
             <Link className="flex items-end gap-1" href={"/projects"}>
               <span className="font-mono text-sm font-medium uppercase">
@@ -134,6 +139,30 @@ export default function Home() {
           <RecentReview />
           <RecentReview />
         </div>
+      </section>
+
+      {/* Tech-Stack Section */}
+
+      <section className="mt-10 px-4">
+        {/* header */}
+        <div className="flex flex-col gap-1">
+          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
+            <p className="font-mono text-xs text-gray-600">03</p>
+            <div className="flex flex-col gap-0">
+              <h1 className="font-inter text-2xl font-semibold">Stack</h1>
+              <span className="text-sm text-gray-600">
+                The tools I reach for, organised by where they live.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* container */}
+        <ul className="mt-5 gap-3 grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] ">
+         <StackCard src="/icons/code.svg">Frontend</StackCard>
+         <StackCard src="/icons/code.svg">Frontend</StackCard>
+         <StackCard src="/icons/code.svg">Frontend</StackCard>
+        </ul>
       </section>
 
       {/* Experience Section */}
@@ -204,14 +233,14 @@ export default function Home() {
 
         {/* container */}
         <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
-          <CertificateCard/>
-          <CertificateCard/>
-          <CertificateCard/>
-          <CertificateCard/>
+          <CertificateCard />
+          <CertificateCard />
+          <CertificateCard />
+          <CertificateCard />
         </div>
       </section>
 
-       {/* Certificates Section */}
+      {/* Certificates Section */}
 
       <section className="mt-10 px-4">
         {/* header */}

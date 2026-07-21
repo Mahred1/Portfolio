@@ -6,7 +6,7 @@ type Props = {
 };
 const StackTag = ({ children,src }: Props) => {
   return (
-    <div className="flex gap-1 border-3 bg-surface px-2 py-0.5 font-mono text-sm  border-secondary">
+    <div className="flex gap-2 border-2 bg-surface px-2 py-1 font-mono text-xs  border-gray-300">
       <Image src={src} alt={children} width={18} height={18} />
       {children}
     </div>

@@ -6,10 +6,10 @@ import StackTag from "../StackTag";
 const ProjectCard = () => {
   return (
     <div className="border-2 border-foreground hover:border-accent">
-      <div className="w-full h-65  relative bg-linear-0 ">
+      <div className="w-full h-65  relative border-b-2 border-foreground hover:border-accent">
         <Image src={"/pictures/project.png" } className="object-fit" alt="Project" fill/>
       </div>
-      <div className="px-3 py-2 mt-3 bg-surface">
+      <div className="px-3 py-2 mt-3 bg-surface ">
         <div className="flex justify-between items-center ">
           <span className="font-semibold text-2xl">Ledgeros</span>
           <span className="font-mono text-xs opacity-80 border px-1 py-0.5 ">Full-stack</span>
