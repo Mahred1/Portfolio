@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import StackTag from "../StackTag";
 
 const ProjectCard = () => {
   return (
@@ -8,7 +9,7 @@ const ProjectCard = () => {
       <div className="w-full h-65  relative bg-linear-0 ">
         <Image src={"/pictures/project.png" } className="object-fit" alt="Project" fill/>
       </div>
-      <div className="px-3 py-2 mt-3">
+      <div className="px-3 py-2 mt-3 bg-surface">
         <div className="flex justify-between items-center ">
           <span className="font-semibold text-2xl">Ledgeros</span>
           <span className="font-mono text-xs opacity-80 border px-1 py-0.5 ">Full-stack</span>
@@ -17,7 +18,16 @@ const ProjectCard = () => {
           Double-entry bookkeeping platform with audit log, multi-currency and a
           typed API layer.
         </p>
-        <div className="flex w-full gap-2  border-t-2 justify-between mt-8 pt-4">
+
+         {/* tags */}
+        <div className="my-4 flex items-center justify-start gap-2 flex-wrap">
+            <StackTag src="/icons/react.svg">React</StackTag>
+            <StackTag src="/icons/nextjs.svg">Nextjs</StackTag>
+            <StackTag src="/icons/git.svg">Git</StackTag>
+            
+        </div>
+
+        <div className="flex w-full gap-2  border-t-2 justify-between mt-5 pt-4">
           <Link className="flex gap-1 w-full transition-colors ease-in items-center justify-center bg-surface text-foreground border-foreground border-2 hover:text-surface hover:bg-foreground text-sm font-medium py-2" href={""}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -56,6 +66,8 @@ const ProjectCard = () => {
             <span>Live</span>
           </Link>
         </div>
+
+       
       </div>
     </div>
   );
