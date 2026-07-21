@@ -1,4 +1,5 @@
 import ProjectFilter from "../_components/ProjectFIlter";
+import ProjectCard from "../_components/projects/ProjectCard";
 
 const Page = async ({
   searchParams,
@@ -24,6 +25,16 @@ const Page = async ({
       {/* Filter */}
 
       <ProjectFilter />
+
+
+      {/* conatiner */}
+
+      <div className="mt-8 grid gap-5 grid-cols-[repeat(auto-fit,minmax(400px,1fr))]">
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+        <ProjectCard/>
+      </div>
     </div>
   );
 };
