@@ -47,7 +47,7 @@ const ProjectCard = ({
         {/* tags */}
         <div className="my-4 flex items-center justify-start gap-2 flex-wrap">
           {stack.map((tag) => (
-            <StackTag key={tag} src={`/icons/${tag.toLowerCase()}.svg`}>
+            <StackTag key={tag} src={tag}>
               {tag}
             </StackTag>
           ))}
