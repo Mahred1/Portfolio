@@ -2,42 +2,63 @@ import Image from "next/image";
 import Link from "next/link";
 import StackTag from "../StackTag";
 
-type Props ={
-  title:string,
-  description:string,
-  category:string,
-  stack:string[],
-  liveLink:string,
-  repoLink:string
+type Props = {
+  title: string;
+  description: string;
+  category: string;
+  stack: string[];
+  liveLink: string;
+  repoLink: string;
+  slug: string;
+};
 
-}
-
-const ProjectCard = ({title,description,category,stack,liveLink,repoLink}:Props) => {
+const ProjectCard = ({
+  title,
+  description,
+  category,
+  stack,
+  liveLink,
+  repoLink,
+  slug,
+}: Props) => {
   return (
-  
-   <div  className="border-2 border-foreground hover:border-accent">
-     
+    <div className="border-2 border-foreground relative hover:border-accent">
+      <Link
+        href={`projects/${slug}`}
+        className="absolute z-4 top-0 left-0 w-full h-full bg-none"
+      ></Link>
       <div className="w-full h-65  relative border-b-2 border-foreground hover:border-accent">
-        <Image src={"/pictures/project.png" } className="object-fit" alt="Project" fill/>
+        <Image
+          src={"/pictures/project.png"}
+          className=" object-cover"
+          alt="Project"
+          fill
+        />
       </div>
       <div className="px-3 py-2 mt-3 bg-surface ">
         <div className="flex justify-between items-center ">
           <span className="font-semibold text-2xl">{title}</span>
-          <span className="font-mono text-xs opacity-80 border px-1 py-0.5 ">{category}</span>
+          <span className="font-mono text-xs opacity-80 border px-1 py-0.5 ">
+            {category}
+          </span>
         </div>
-        <p className="mt-2 text-gray-600 text-sm">
-          {description}
-        </p>
+        <p className="mt-2 text-gray-600 text-sm">{description}</p>
 
-         {/* tags */}
+        {/* tags */}
         <div className="my-4 flex items-center justify-start gap-2 flex-wrap">
-          {stack.map(tag=><StackTag key={tag} src={`/icons/${tag.toLowerCase()}.svg`}>{tag}</StackTag>)}
-            
-            
+          {stack.map((tag) => (
+            <StackTag key={tag} src={`/icons/${tag.toLowerCase()}.svg`}>
+              {tag}
+            </StackTag>
+          ))}
         </div>
 
-        <div className="flex w-full gap-2  border-t-2 justify-between mt-5 pt-4">
-          <Link target="_blank" className="flex gap-1 w-full transition-colors ease-in items-center justify-center bg-surface text-foreground border-foreground border-2 hover:text-surface hover:bg-foreground text-sm font-medium py-2" href={repoLink }>
+        <div className="flex w-full gap-2   border-t-2 justify-between mt-5 pt-4">
+          <Link
+            target="_blank"
+            className="flex z-5  gap-1 w-full transition-colors ease-in items-center justify-center bg-surface text-foreground border-foreground border-2 hover:text-surface hover:bg-foreground text-sm font-medium py-2"
+            href={repoLink}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -55,7 +76,11 @@ const ProjectCard = ({title,description,category,stack,liveLink,repoLink}:Props)
             </svg>
             <span>Code</span>
           </Link>
-          <Link target="_blank" className="flex gap-1 transition-colors ease-in items-center border-2 border-foreground hover:border-accent hover:text-foreground  hover:bg-accent w-full justify-center bg-foreground text-surface text-sm font-medium py-2" href={liveLink}>
+          <Link
+            target="_blank"
+            className="flex z-5 gap-1 transition-colors ease-in items-center border-2 border-foreground hover:border-accent hover:text-foreground  hover:bg-accent w-full justify-center bg-foreground text-surface text-sm font-medium py-2"
+            href={liveLink}
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -75,8 +100,6 @@ const ProjectCard = ({title,description,category,stack,liveLink,repoLink}:Props)
             <span>Live</span>
           </Link>
         </div>
-
-       
       </div>
     </div>
   );

@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link className={cn("", path == "/" ? styles.active : styles.inactive)} href={"/"}>
           Home
         </Link>
-        <Link className={cn("", path == "/projects" ? styles.active : styles.inactive)} href={"/projects"}>
+        <Link className={cn("", path.includes("/projects")  ? styles.active : styles.inactive)} href={"/projects"}>
           Projects
         </Link>
         <Link className={cn("", path == "/reviews" ? styles.active : styles.inactive)} href={"/reviews"}>

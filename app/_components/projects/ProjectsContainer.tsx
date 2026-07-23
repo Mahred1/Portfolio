@@ -23,6 +23,7 @@ const ProjectsContainer = async() => {
         return (
           <li key={project._id}>
             <ProjectCard
+            slug={project.slug.current}
               stack={project["stack"]}
               liveLink={project.liveLink}
               repoLink={project.repoLink}
