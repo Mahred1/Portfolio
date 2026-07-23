@@ -1,5 +1,6 @@
-import React from "react";
-import ReviewCard from "../_components/reviews/ReviewCard";
+import { Suspense } from "react";
+import ReviewsContainer from "../_components/reviews/ReviewsContainer";
+import Loading from "../loading";
 
 const Page = () => {
   return (
@@ -10,7 +11,9 @@ const Page = () => {
         <p className="font-mono text-xs text-gray-600">01</p>
         <div className="flex flex-col gap-0">
           <h1 className="font-inter text-2xl font-semibold">Client reviews</h1>
-          <span className="text-sm text-gray-600">6 testimonials · 4.8 average rating</span>
+          <span className="text-sm text-gray-600">
+            6 testimonials · 4.8 average rating
+          </span>
         </div>
       </div>
 
@@ -18,7 +21,7 @@ const Page = () => {
         <div className="xs:px-4 xs:py-4 flex h-full flex-1 flex-col items-start gap-2 border-r-2 px-3 py-2">
           <p className="text-xs text-gray-600 uppercase">average</p>
           <div className="flex items-baseline gap-1">
-            <p className="xs:text-3xl text-xl font-black sm:text-5xl">4.8</p>
+            <p className="xs:text-3xl text-xl font-black sm:text-5xl">5.0</p>
             <p className="xs:text-sm text-xs text-gray-600">/5.0</p>
           </div>
         </div>
@@ -40,12 +43,10 @@ const Page = () => {
 
       {/* Reviews */}
 
-      <div className="mt-8 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-4">
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-        <ReviewCard />
-      </div>
+      <Suspense fallback={<Loading className="h-full mt-40" />}>
+        <ReviewsContainer />
+      </Suspense>
+     
     </div>
   );
 };

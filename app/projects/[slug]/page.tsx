@@ -1,9 +1,8 @@
 import StackTag from '@/app/_components/StackTag';
 import { client } from '@/app/sanity/client';
 import { createImageUrlBuilder, SanityImageSource } from '@sanity/image-url';
-import { PortableText, SanityDocument } from 'next-sanity';
+import { SanityDocument } from 'next-sanity';
 import Link from 'next/link';
-import React from 'react'
 
 const PROJECT_QUERY = `*[_type == "project" && slug.current == $slug][0]`;
 const { projectId, dataset } = client.config();
@@ -43,7 +42,7 @@ const page = async({
       <div className="prose">
         <div className='flex items-center gap-2'>
 
-       {project.stack && project.stack.map((tag:string)=><StackTag key={tag} src={tag}>{tag}</StackTag>)}
+       {project.stack && project.stack.map((tag:string)=><StackTag key={tag} src={`/icons/${tag.toLowerCase()}.svg`}>{tag}</StackTag>)}
         </div>
         <p className='mt-4'>{project.description}</p>
       </div>

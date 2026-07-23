@@ -1,9 +1,6 @@
 import { client } from "@/app/sanity/client";
 import { SanityDocument } from "next-sanity";
-import React from "react";
 import ProjectCard from "./ProjectCard";
-import { resolve } from "path";
-import { rejects } from "assert";
 
 
 const POST_QUERY = `*[_type == "project" && defined(slug.current)]

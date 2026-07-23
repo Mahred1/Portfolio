@@ -1,6 +1,14 @@
 import React from "react";
 
-const ReviewCard = () => {
+type Props={
+  name:string,
+  description:string,
+  position:string,
+  company:string,
+  source:string
+}
+
+const ReviewCard = ({name,description,position,company,source}:Props) => {
   const stars = Array.from({ length: 5 }, (_, index) => {
     return (
       <svg
@@ -23,9 +31,9 @@ const ReviewCard = () => {
   return (
     <div className="border-foreground bg-surface border-2 p-4">
       <div className="items flex items-baseline justify-between border-b-2 border-foreground pb-3">
-        <h1 className="text-base font-bold">Northwind</h1>
+        <h1 className="text-base font-bold">{company.split(" ").at(0)}</h1>
         <p className="font-mono text-xs text-gray-600 uppercase">
-          Via linkedin
+          Via {source}
         </p>
       </div>
 
@@ -46,16 +54,14 @@ const ReviewCard = () => {
           <path d="M5 3a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2 1 1 0 0 1 1 1v1a2 2 0 0 1-2 2 1 1 0 0 0-1 1v2a1 1 0 0 0 1 1 6 6 0 0 0 6-6V5a2 2 0 0 0-2-2z" />
         </svg>
         <span className="font-medium text-sm">
-          Ships fast, communicates faster. The kind of engineer you keep on
-          speed dial. Kai owned our migration end-to-end and left the codebase
-          better than he found it.
+         {description}
         </span>
       </div>
 
       <div className="mt-6 border-t-2 border-foreground pt-3 flex justify-between">
         <div >
-          <h2 className="font-medium text-sm">Mara Lindqvist</h2>
-          <p className="text-xs text-gray-600 ">CTO, Northwind Labs</p>
+          <h2 className="font-medium text-sm">{name}</h2>
+          <p className="text-xs text-gray-600 ">{position.toUpperCase()}, {company}</p>
         </div>
         <div className="flex gap-0">
 
