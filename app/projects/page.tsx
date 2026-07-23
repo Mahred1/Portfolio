@@ -1,11 +1,7 @@
-import { SanityDocument } from "next-sanity";
+import { Suspense } from "react";
 import ProjectFilter from "../_components/ProjectFIlter";
-import ProjectCard from "../_components/projects/ProjectCard";
-import { client } from "../sanity/client";
-
-const POST_QUERY = `*[_type == "project" && defined(slug.current)]
-  { _id, title,slug,image,description,stack,category,stack,liveLink,repoLink }`;
-const options = { next: { revalidate: 30 } };
+import ProjectsContainer from "../_components/projects/ProjectsContainer";
+import Loading from "../loading";
 
 const Page = async ({
   searchParams,
@@ -14,8 +10,6 @@ const Page = async ({
 }) => {
   const currentFilter = (await searchParams).filter || "all";
 
-  const projects = await client.fetch<SanityDocument[]>(POST_QUERY, {}, options);
-console.log(projects)
   return (
     <div className="mt-6 pb-16 px-5">
       {/* Header Section */}
@@ -31,27 +25,12 @@ console.log(projects)
       </div>
 
       {/* Filter */}
-
       <ProjectFilter />
 
       {/* conatiner */}
-
-      <ul className="mt-8 grid gap-5 grid-cols-[repeat(auto-fit,minmax(310px,1fr))]">
-        {projects.map((project) => {
-          return (
-            <li key={project._id}>
-              <ProjectCard
-              stack={project["stack"]}
-              liveLink={project.liveLink}
-repoLink={project.repoLink}
-                title={project.title}
-                description={project.description}
-                category={project.category}
-              />
-            </li>
-          );
-        })}
-      </ul>
+      <Suspense fallback={<Loading className="h-full mt-40"/>}>
+        <ProjectsContainer />
+      </Suspense>
     </div>
   );
 };
