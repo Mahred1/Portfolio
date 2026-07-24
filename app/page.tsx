@@ -10,6 +10,7 @@ import StackCard from "./_components/StackCard";
 import { Suspense } from "react";
 import Loading from "./loading";
 import FeaturedProjectsContainer from "./_components/projects/FeaturedProjectsContainer";
+import RecentReviewsContainer from "./_components/reviews/RecentReviewsContainer";
 
 export default function Home() {
   const date = new Date();
@@ -111,7 +112,7 @@ export default function Home() {
                 Recent Reviews
               </h1>
             </div>
-            <Link className="flex items-end gap-1" href={"/projects"}>
+            <Link className="flex items-end gap-1" href={"/reviews"}>
               <span className="font-mono text-sm font-medium uppercase">
                 All reviews
               </span>
@@ -135,10 +136,9 @@ export default function Home() {
         </div>
 
         {/* container */}
-        <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(300px,1fr))] gap-3">
-          <RecentReview />
-          <RecentReview />
-        </div>
+         <Suspense fallback={<Loading className="h-full mt-40"/>}>
+        <RecentReviewsContainer />
+      </Suspense>
       </section>
 
       {/* Tech-Stack Section */}
