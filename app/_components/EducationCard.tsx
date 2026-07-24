@@ -1,16 +1,23 @@
 import React from "react";
-
-const EducationCard = () => {
+type Props ={
+  start:string,
+  end: string,
+  inistitue: string,
+  location: string,
+  certificate: string,
+  description: string
+}
+const EducationCard = ({start,end,inistitue,location,certificate,description}:Props) => {
   return (
     <li className="border-foreground bg-surface flex gap-4 border-2 px-4 py-6">
       <div className="pr-16 font-mono text-xs">
-        <p>2024</p>
-        <p className="text-gray-600 uppercase">- Present</p>
+        <p>{start}</p>
+        <p className="text-gray-600 uppercase">- {end}</p>
       </div>
 
       <div className="border-foreground relative flex flex-col gap-3 border-l-2 px-5">
         {/* ring */}
-        <div className="border-foreground bg-surface absolute top-4 -left-2 h-3.5 w-3.5 border-2"></div>
+        <div className="border-foreground bg-surface absolute top-4 -left-2 h-3.5 w-3.5 border-2"/>
 
         <div className="flex flex-col gap-0">
           <div className="flex items-center gap-1 font-mono text-gray-600 uppercase">
@@ -30,16 +37,15 @@ const EducationCard = () => {
               <path d="M22 10v6" />
               <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
             </svg>
-            <span className="text-sm">Adama, ET</span>
+            <span className="text-sm">{location}</span>
           </div>
           <h2 className="font-inter text-base font-semibold">
-            M.Sc. Software Engineering
+            {certificate}
           </h2>
-          <p className="text-accent text-sm font-medium">ASTU</p>
+          <p className="text-accent text-sm font-medium uppercase">{inistitue}</p>
         </div>
         <p className="text-sm text-gray-600">
-          Specialised in distributed systems and human-computer interaction.
-          Thesis on edge-first data sync.
+          {description}
         </p>
       </div>
     </li>

@@ -94,9 +94,9 @@ export default function Home() {
         </div>
 
         {/* container */}
-       <Suspense fallback={<Loading className="h-full mt-40"/>}>
-        <FeaturedProjectsContainer />
-      </Suspense>
+        <Suspense fallback={<Loading className="h-full mt-40" />}>
+          <FeaturedProjectsContainer />
+        </Suspense>
       </section>
 
       {/* Recent Reviews Section */}
@@ -135,9 +135,9 @@ export default function Home() {
         </div>
 
         {/* container */}
-         <Suspense fallback={<Loading className="h-full mt-40"/>}>
-        <RecentReviewsContainer />
-      </Suspense>
+        <Suspense fallback={<Loading className="h-full mt-40" />}>
+          <RecentReviewsContainer />
+        </Suspense>
       </section>
 
       {/* Tech-Stack Section */}
@@ -158,11 +158,19 @@ export default function Home() {
 
         {/* container */}
         <ul className="mt-5 gap-3 grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] ">
-          {Object.entries(techStack).map(([domain,stack],index)=><StackCard index={index} key={domain} stack={stack} src={"/icons/"+domain.toLowerCase()+".svg"}>{domain}</StackCard> )}
-         
-         {/* <StackCard stack={techStack.fronted} src="/icons/database.svg">Backend</StackCard>
+          {Object.entries(techStack).map(([domain, stack], index) => (
+            <StackCard
+              index={index}
+              key={domain}
+              stack={stack}
+              src={"/icons/" + domain.toLowerCase() + ".svg"}
+            >
+              {domain}
+            </StackCard>
+          ))}
+
+          {/* <StackCard stack={techStack.fronted} src="/icons/database.svg">Backend</StackCard>
          <StackCard stack={techStack.fronted} src="/icons/workflow.svg">Workflows</StackCard> */}
-         
         </ul>
       </section>
 
@@ -184,16 +192,15 @@ export default function Home() {
 
         {/* container */}
         <ul className="mt-5 flex flex-col gap-4">
-          <ExperienceCard 
-          type="remote"
-          start="2025"
-          end="2025"
-          position="Principal Engineer"
-          company="Northwind Labs"
-          description="Leading platform rebuild and a team of four engineers shipping fintech
+          <ExperienceCard
+            type="remote"
+            start="2025"
+            end="2025"
+            position="Principal Engineer"
+            company="Northwind Labs"
+            description="Leading platform rebuild and a team of four engineers shipping fintech
           tooling."
           />
-          
         </ul>
       </section>
 
@@ -215,9 +222,15 @@ export default function Home() {
 
         {/* container */}
         <ul className="mt-5 flex flex-col gap-4">
-          <EducationCard />
-          <EducationCard />
-          <EducationCard />
+          <EducationCard
+            start="2024"
+            end="Present"
+            inistitue="ASTU"
+            location="dama, ET"
+            certificate="M.Sc. Software Engineering"
+            description="Specialised in distributed systems and human-computer interaction.
+          Thesis on edge-first data sync."
+          />
         </ul>
       </section>
 
