@@ -184,9 +184,16 @@ export default function Home() {
 
         {/* container */}
         <ul className="mt-5 flex flex-col gap-4">
-          <ExperienceCard />
-          <ExperienceCard />
-          <ExperienceCard />
+          <ExperienceCard 
+          type="remote"
+          start="2025"
+          end="2025"
+          position="Principal Engineer"
+          company="Northwind Labs"
+          description="Leading platform rebuild and a team of four engineers shipping fintech
+          tooling."
+          />
+          
         </ul>
       </section>
 

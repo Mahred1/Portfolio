@@ -1,7 +1,5 @@
 import Image from 'next/image'
-import React from 'react'
 import StackTag from './StackTag'
-import { Tagesschrift } from 'next/font/google'
 
 type Props ={
     children:string,
