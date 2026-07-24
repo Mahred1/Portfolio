@@ -35,21 +35,32 @@ export default function Home() {
         </div>
         <div>
           <div className="flex items-center gap-3">
-            <Button
+            <Button href="/projects"
               className="flex-row-reverse justify-center px-3 py-1 text-base font-normal"
               type="primary"
-              src="icons/mail.svg"
-              alt="contact"
+              text="See Projects"
             >
-              See Projects
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="lucide lucide-arrow-up-right-icon h-5 w-5 lucide-arrow-up-right"
+              >
+                <path d="M7 7h10v10" />
+                <path d="M7 17 17 7" />
+              </svg>
             </Button>
-            <Button
+            <Button href="/reviews"
               className="text-md justify-center px-3 py-1"
+              text="Read Reviews"
               type="secondary"
-              alt="contact"
-            >
-              Read Reviews
-            </Button>
+            ></Button>
           </div>
         </div>
       </section>
