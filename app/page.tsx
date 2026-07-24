@@ -7,6 +7,9 @@ import EducationCard from "./_components/EducationCard";
 import CertificateCard from "./_components/CertificateCard";
 import AchieveentCard from "./_components/AchieveentCard";
 import StackCard from "./_components/StackCard";
+import { Suspense } from "react";
+import Loading from "./loading";
+import FeaturedProjectsContainer from "./_components/projects/FeaturedProjectsContainer";
 
 export default function Home() {
   const date = new Date();
@@ -91,12 +94,9 @@ export default function Home() {
         </div>
 
         {/* container */}
-        <div className="mt-5 grid grid-cols-[repeat(auto-fit,minmax(400px,1fr))] gap-3">
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
-          <FeaturedProject />
-        </div>
+       <Suspense fallback={<Loading className="h-full mt-40"/>}>
+        <FeaturedProjectsContainer />
+      </Suspense>
       </section>
 
       {/* Recent Reviews Section */}
