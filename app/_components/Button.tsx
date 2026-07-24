@@ -13,8 +13,8 @@ type Props = {
 const baseStyle = "font-inter text-md w-fit px-2 py-1 flex gap-1 items-center max-h-fit hover:opacity-85 hover:cursor-pointer";
 
 const variants = {
-  primary: "bg-foreground  font-medium  border-foreground border-2 text-secondary  ",
-  secondary: "bg-surface  border-foreground border-2 text-primary",
+  primary: "bg-foreground dark:bg-secondary dark:border-secondary dark:text-foreground  font-medium  border-foreground border-2 text-secondary  ",
+  secondary: "bg-surface dark:bg-primary dark:text-secondary dark:border-secondary  border-foreground border-2 text-primary",
 };
 
 const Button = ({ children, type,href, text, className }: Props) => {
