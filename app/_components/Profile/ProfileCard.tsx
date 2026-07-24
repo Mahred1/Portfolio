@@ -7,7 +7,7 @@ import Social from "./Social";
 const ProfileCard = () => {
   return (
     // container
-    <div className="border-foreground bg-surface mx-3 mt-3 min-w-[95%] sm:mx-auto lg:hidden">
+    <div className="border-foreground bg-surface mx-3 mt-3 min-w-[95%]  sm:mx-auto lg:hidden">
       {/* top container */}
       <div className="flex gap-3 border-2">
         {/* Image */}
