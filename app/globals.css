@@ -1,11 +1,11 @@
 @import "tailwindcss";
-
+@custom-variant dark (&:where(.dark, .dark *));
 :root {
   --background: #fbfaf8;
   --foreground: #0E0D08;
   --surface: #fefefe;
   --accent: #f77f00;
-  --primary: #0E0D08;
+  --primary: #16181d;
   --secondary: #f2f1ee;
 }
 

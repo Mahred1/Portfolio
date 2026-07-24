@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${inter.variable} ${mono.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col ">
-        <div className="w-full lg:flex justify-center gap-3 lg:gap-10">
+        <div className="w-full lg:flex justify-center dark:bg-foreground bg-secondary gap-3 lg:gap-10">
           <aside className="flex-none mt-4 overflow-y-auto lg:sticky top-6 lg:h-dvh ">
             <ProfileCardVertical/>
           </aside>
