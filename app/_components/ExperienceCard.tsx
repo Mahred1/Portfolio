@@ -11,18 +11,18 @@ type Props ={
 
 const ExperienceCard = ({start,end,type,position,company,description}:Props) => {
   return (
-    <li className="border-foreground bg-surface flex border-2 px-4 py-6 gap-4">
-      <div className="font-mono text-xs pr-16 ">
+    <li className="border-foreground transition-colors dark:border-secondary dark:bg-primary ease-in bg-surface flex border-2 px-4 py-6 gap-4">
+      <div className="font-mono dark:text-neutral-400 text-xs pr-16 ">
         <p>{start}</p>
-        <p className="text-gray-600 uppercase">- {end}</p>
+        <p className="text-gray-600 dark:text-neutral-600 uppercase">- {end}</p>
       </div>
 
-      <div className="border-foreground relative flex flex-col gap-3 border-l-2 px-5">
+      <div className="border-foreground dark:border-secondary relative flex flex-col gap-3 border-l-2 px-5">
         {/* ring */}
-        <div className="border-foreground bg-surface w-3.5 h-3.5 absolute border-2 top-4 -left-2"/>
+        <div className="border-foreground dark:bg-primary dark:border-secondary bg-surface w-3.5 h-3.5 absolute border-2 top-4 -left-2"/>
 
         <div className="flex flex-col gap-0">
-          <div className="flex items-center gap-1 font-mono text-gray-600 uppercase">
+          <div className="flex dark:text-gray-400 items-center gap-1 font-mono text-gray-600 uppercase">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="18"
@@ -38,12 +38,12 @@ const ExperienceCard = ({start,end,type,position,company,description}:Props) => 
               <path d="M16 20V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
               <rect width="20" height="14" x="2" y="6" rx="2" />
             </svg>
-            <span className="text-sm">{type}</span>
+            <span className="text-sm ">{type}</span>
           </div>
-          <h2 className="font-inter text-base font-semibold">{position}</h2>
+          <h2 className="font-inter text-base dark:text-secondary font-semibold ">{position}</h2>
           <p className="text-accent text-sm font-medium">{company}</p>
         </div>
-        <p className="text-gray-600 text-sm">
+        <p className="text-gray-600 dark:text-gray-400 text-sm">
           {description}
         </p>
       </div>

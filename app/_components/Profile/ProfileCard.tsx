@@ -7,7 +7,7 @@ import Social from "./Social";
 const ProfileCard = () => {
   return (
     // container
-    <div className="border-foreground dark:bg-primary bg-surface mx-3 mt-3 min-w-[95%]  sm:mx-auto lg:hidden">
+    <div className="border-foreground transition-colors ease-in dark:bg-primary bg-surface mx-3 mt-3 min-w-[95%]  sm:mx-auto lg:hidden">
       {/* top container */}
       <div className="flex gap-3 dark:border-secondary border-2">
         {/* Image */}
@@ -51,9 +51,9 @@ const ProfileCard = () => {
               viewBox="0 0 24 24"
               fill="none"
               stroke="currentColor"
-              stroke-width="1"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
               className="lucide w-3.5 h-3.5 lucide-map-pin-icon lucide-map-pin"
             >
               <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />

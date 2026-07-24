@@ -1,15 +1,13 @@
 import React from "react";
 
+type Props = {
+  name: string;
+  description: string;
+  position: string;
+  company: string;
+};
 
-type Props={
-  name:string,
-  description:string,
-  position:string,
-  company:string,
-  
-}
-
-const RecentReview = ({name,description,position,company}:Props) => {
+const RecentReview = ({ name, description, position, company }: Props) => {
   const stars = Array.from({ length: 5 }, (_, index) => {
     return (
       <svg key={index} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-star-icon fill-accent lucide-star stroke-accent h-4 w-4">
@@ -18,16 +16,18 @@ const RecentReview = ({name,description,position,company}:Props) => {
     );
   });
   return (
-    <div className="bg-surface border-foreground hover:bg-secondary gap-4 border-2 pl-5 pr-4 flex flex-col py-5 transition-colors ease-in">
+    <div className="bg-surface dark:bg-primary dark:border-secondary dark:hover:bg-gray-700 border-foreground hover:bg-secondary flex flex-col gap-4 border-2 py-5 pr-4 pl-5 transition-colors ease-in">
       <div className="flex gap-1">{stars}</div>
-      <p className="text-sm font-medium">{`"${description}"`}</p>
-      <div className="border border-foreground"></div>
+      <p className="text-sm font-medium dark:text-gray-400">{`"${description}"`}</p>
+      <div className="dark:border-secondary border-foreground border"></div>
       <div className="flex flex-col gap-0">
-        <h2 className="text-sm font-medium ">{name}</h2>
-        <p className="text-gray-600 text-xs">{position.toUpperCase()}, {company}</p>
+        <h2 className="text-sm font-medium dark:text-gray-400">{name}</h2>
+        <p className="text-xs text-gray-600 dark:text-neutral-500">
+          {position.toUpperCase()}, {company}
+        </p>
       </div>
     </div>
   );
 };
- 
+
 export default RecentReview;

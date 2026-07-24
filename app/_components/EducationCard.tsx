@@ -9,15 +9,15 @@ type Props ={
 }
 const EducationCard = ({start,end,inistitue,location,certificate,description}:Props) => {
   return (
-    <li className="border-foreground bg-surface flex gap-4 border-2 px-4 py-6">
-      <div className="pr-16 font-mono text-xs">
+    <li className="border-foreground dark:border-secondary dark:bg-primary transition-colors ease-in bg-surface flex gap-4 border-2 px-4 py-6">
+      <div className="pr-16 dark:text-neutral-400 font-mono text-xs">
         <p>{start}</p>
-        <p className="text-gray-600 uppercase">- {end}</p>
+        <p className="text-gray-600 dark:text-neutral-600 uppercase">- {end}</p>
       </div>
 
-      <div className="border-foreground relative flex flex-col gap-3 border-l-2 px-5">
+      <div className="border-foreground dark:border-secondary relative flex flex-col gap-3 border-l-2 px-5">
         {/* ring */}
-        <div className="border-foreground bg-surface absolute top-4 -left-2 h-3.5 w-3.5 border-2"/>
+        <div className="border-foreground dark:bg-primary dark:border-secondary bg-surface absolute top-4 -left-2 h-3.5 w-3.5 border-2"/>
 
         <div className="flex flex-col gap-0">
           <div className="flex items-center gap-1 font-mono text-gray-600 uppercase">
@@ -37,14 +37,14 @@ const EducationCard = ({start,end,inistitue,location,certificate,description}:Pr
               <path d="M22 10v6" />
               <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
             </svg>
-            <span className="text-sm">{location}</span>
+            <span className="text-sm dark:text-gray-400">{location}</span>
           </div>
-          <h2 className="font-inter text-base font-semibold">
+          <h2 className="font-inter text-base font-semibold dark:text-secondary">
             {certificate}
           </h2>
           <p className="text-accent text-sm font-medium uppercase">{inistitue}</p>
         </div>
-        <p className="text-sm text-gray-600">
+        <p className="text-sm text-gray-600 dark:text-gray-400">
           {description}
         </p>
       </div>

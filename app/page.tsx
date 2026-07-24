@@ -19,15 +19,15 @@ export default function Home() {
       {/* Hero Section */}
       <section className="mt-6 flex w-full flex-col items-start gap-5 px-4">
         {/* Date */}
-        <div className="flex items-center gap-1 font-mono text-sm tracking-tighter">
-          <div className="bg-accent h-2 w-2"></div>Now / {year}
+        <div className="flex items-center dark:text-neutral-600 gap-1 font-mono text-sm tracking-tighter">
+          <div className="bg-accent  h-2 w-2"></div>Now / {year}
         </div>
         <div className="flex flex-col gap-2">
-          <div className="text-foreground text-4xl font-bold sm:text-5xl">
+          <div className="text-foreground dark:text-secondary text-4xl font-bold sm:text-5xl">
             I build web products <br /> that{" "}
             <span className="text-accent">do the work </span> for people.
           </div>
-          <p className="max-w-[620] text-lg text-gray-600">
+          <p className="max-w-[620] text-lg text-gray-600 dark:text-gray-400">
             I&apos;m a full-stack developer who treats engineering as a craft
             and shipping as a habit. For the last three years I&apos;ve helped
             startups and small teams take ideas from whiteboard to production.
@@ -71,18 +71,18 @@ export default function Home() {
         {/* header */}
         <div className="flex flex-col gap-1">
           <div className="flex flex-col gap-0">
-            <p className="font-mono text-xs text-gray-600">01</p>
-            <h1 className="font-inter text-2xl font-semibold">
+            <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">01</p>
+            <h1 className="font-inter text-2xl font-semibold dark:text-secondary">
               Featured Projects
             </h1>
           </div>
 
-          <div className="boder-foreground flex items-end justify-between border-b-2 pb-3">
-            <p className="text-sm text-gray-600">
+          <div className="boder-foreground flex items-end justify-between dark:border-secondary border-b-2 pb-3">
+            <p className="text-sm text-gray-600 dark:text-gray-400">
               A small selection. Full archive in the Projects tab.
             </p>
             <Link className="flex items-end gap-1" href={"/projects"}>
-              <span className="font-mono text-sm font-medium uppercase">
+              <span className="font-mono text-sm font-medium uppercase dark:text-gray-400">
                 All work
               </span>
               <svg
@@ -95,7 +95,7 @@ export default function Home() {
                 strokeWidth="1"
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                className="lucide lucide-arrow-up-right-icon lucide-arrow-up-right mt-1"
+                className="lucide dark:stroke-gray-400 lucide-arrow-up-right-icon lucide-arrow-up-right mt-1"
               >
                 <path d="M7 7h10v10" />
                 <path d="M7 17 17 7" />
@@ -115,15 +115,15 @@ export default function Home() {
       <section className="mt-10 px-4">
         {/* header */}
         <div className="flex flex-col gap-1">
-          <div className="boder-foreground flex items-end justify-between border-b-2 pb-2.5">
+          <div className="boder-foreground dark:border-secondary flex items-end justify-between border-b-2 pb-2.5">
             <div className="flex flex-col gap-0">
-              <p className="font-mono text-xs text-gray-600">02</p>
-              <h1 className="font-inter text-2xl font-semibold">
+              <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">02</p>
+              <h1 className="font-inter dark:text-secondary text-2xl font-semibold">
                 Recent Reviews
               </h1>
             </div>
-            <Link className="flex items-end gap-1" href={"/reviews"}>
-              <span className="font-mono text-sm font-medium uppercase">
+            <Link className="flex items-end gap-1 dark:text-gray-400" href={"/reviews"}>
+              <span className="font-mono text-sm  font-medium uppercase">
                 All reviews
               </span>
               <svg
@@ -156,11 +156,11 @@ export default function Home() {
       <section className="mt-10 px-4">
         {/* header */}
         <div className="flex flex-col gap-1">
-          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
-            <p className="font-mono text-xs text-gray-600">03</p>
+          <div className="border-forgrounde dark:border-secondary flex flex-col gap-0 border-b-2 pb-2.5">
+            <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">03</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-semibold">Stack</h1>
-              <span className="text-sm text-gray-600">
+              <h1 className="font-inter text-2xl font-semibold dark:text-secondary">Stack</h1>
+              <span className="text-sm text-gray-600 dark:text-gray-400">
                 The tools I reach for, organised by where they live.
               </span>
             </div>
@@ -180,8 +180,7 @@ export default function Home() {
             </StackCard>
           ))}
 
-          {/* <StackCard stack={techStack.fronted} src="/icons/database.svg">Backend</StackCard>
-         <StackCard stack={techStack.fronted} src="/icons/workflow.svg">Workflows</StackCard> */}
+         
         </ul>
       </section>
 
@@ -190,11 +189,11 @@ export default function Home() {
       <section className="mt-10 px-4">
         {/* header */}
         <div className="flex flex-col gap-1">
-          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
-            <p className="font-mono text-xs text-gray-600">04</p>
+          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5 dark:border-secondary">
+            <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">04</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-semibold">Experience</h1>
-              <span className="text-sm text-gray-600">
+              <h1 className="font-inter text-2xl font-semibold dark:text-secondary">Experience</h1>
+              <span className="text-sm text-gray-600 dark:text-gray-400">
                 Three years of shipping. Most recent first.
               </span>
             </div>
@@ -220,11 +219,11 @@ export default function Home() {
       <section className="mt-10 px-4">
         {/* header */}
         <div className="flex flex-col gap-1">
-          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
-            <p className="font-mono text-xs text-gray-600">05</p>
+          <div className="border-forgrounde dark:border-secondary flex flex-col gap-0 border-b-2 pb-2.5">
+            <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">05</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-semibold">Education</h1>
-              <span className="text-sm text-gray-600">
+              <h1 className="font-inter text-2xl font-semibold dark:text-secondary">Education</h1>
+              <span className="text-sm dark:text-gray-400 text-gray-600">
                 Formal schooling and exchanges.
               </span>
             </div>
@@ -237,7 +236,7 @@ export default function Home() {
             start="2024"
             end="Present"
             inistitue="ASTU"
-            location="dama, ET"
+            location="adama, ET"
             certificate="M.Sc. Software Engineering"
             description="Specialised in distributed systems and human-computer interaction.
           Thesis on edge-first data sync."
@@ -250,13 +249,13 @@ export default function Home() {
       <section className="mt-10 px-4">
         {/* header */}
         <div className="flex flex-col gap-1">
-          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-2.5">
-            <p className="font-mono text-xs text-gray-600">06</p>
+          <div className="border-forgrounde dark:border-secondary flex flex-col gap-0 border-b-2 pb-2.5">
+            <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">06</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-semibold">
+              <h1 className="font-inter text-2xl font-semibold dark:text-secondary">
                 Certificates
               </h1>
-              <span className="text-sm text-gray-600">
+              <span className="text-sm text-gray-600 dark:text-gray-400">
                 Verified credentials and coursework. click to view.
               </span>
             </div>
@@ -277,13 +276,13 @@ export default function Home() {
       <section className="mt-10 px-4">
         {/* header */}
         <div className="flex flex-col gap-1">
-          <div className="border-forgrounde flex flex-col gap-0 border-b-2 pb-3">
-            <p className="font-mono text-xs text-gray-600">07</p>
+          <div className="border-forgrounde dark:border-secondary flex flex-col gap-0 border-b-2 pb-3">
+            <p className="font-mono text-xs text-gray-600 dark:text-neutral-500">07</p>
             <div className="flex flex-col gap-0">
-              <h1 className="font-inter text-2xl font-semibold">
+              <h1 className="font-inter dark:text-secondary text-2xl font-semibold">
                 Achievements
               </h1>
-              <span className="text-sm text-gray-600">
+              <span className="text-sm dark:text-gray-400 text-gray-600">
                 Recognition, talks and milestones.
               </span>
             </div>
