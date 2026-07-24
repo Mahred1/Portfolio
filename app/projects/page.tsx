@@ -29,7 +29,7 @@ const Page = async ({
 
       {/* conatiner */}
       <Suspense fallback={<Loading className="h-full mt-40"/>}>
-        <ProjectsContainer />
+        <ProjectsContainer params={await searchParams} />
       </Suspense>
     </div>
   );
