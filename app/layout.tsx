@@ -26,22 +26,39 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
+    <html suppressHydrationWarning
       lang="en"
       className={`${inter.variable} ${mono.variable} h-full antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              (function() {
+                try {
+                  var stored = localStorage.getItem('theme');
+                  var theme = stored === 'light' || stored === 'dark'
+                    ? stored
+                    : (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+                  if (theme === 'dark') document.documentElement.classList.add('dark');
+                } catch (e) {}
+              })();
+            `,
+          }}
+        />
+      </head>
       <body className="flex min-h-full flex-col ">
         <div className="w-full lg:flex justify-center dark:bg-foreground transition-colors ease-in bg-secondary gap-3 lg:gap-10">
           <aside className="flex-none mt-4 overflow-y-auto lg:sticky top-6 lg:h-dvh ">
-            <ProfileCardVertical/>
+            <ProfileCardVertical />
           </aside>
           <main className="lg:max-w-4xl max-w-full flex   flex-col gap-3  flex-1">
-            <ProfileCard/>
+            <ProfileCard />
             <div className="flex flex-col gap-5">
-            <Navbar/>
-            {children}  
+              <Navbar />
+              {children}
             </div>
-            </main>
+          </main>
         </div>
       </body>
     </html>
