@@ -1,16 +1,15 @@
 import Link from "next/link";
-import Button from "./_components/Button";
-import FeaturedProject from "./_components/projects/FeaturedProject";
-import RecentReview from "./_components/reviews/RecentReview";
-import ExperienceCard from "./_components/ExperienceCard";
-import EducationCard from "./_components/EducationCard";
-import CertificateCard from "./_components/CertificateCard";
-import AchieveentCard from "./_components/AchieveentCard";
-import StackCard from "./_components/StackCard";
 import { Suspense } from "react";
-import Loading from "./loading";
+import AchieveentCard from "./_components/AchieveentCard";
+import Button from "./_components/Button";
+import CertificateCard from "./_components/CertificateCard";
+import EducationCard from "./_components/EducationCard";
+import ExperienceCard from "./_components/ExperienceCard";
 import FeaturedProjectsContainer from "./_components/projects/FeaturedProjectsContainer";
 import RecentReviewsContainer from "./_components/reviews/RecentReviewsContainer";
+import StackCard from "./_components/StackCard";
+import Loading from "./loading";
+import techStack from "./constants/techStack";
 
 export default function Home() {
   const date = new Date();
@@ -159,9 +158,11 @@ export default function Home() {
 
         {/* container */}
         <ul className="mt-5 gap-3 grid grid-cols-[repeat(auto-fit,minmax(270px,1fr))] ">
-         <StackCard src="/icons/code.svg">Frontend</StackCard>
-         <StackCard src="/icons/code.svg">Frontend</StackCard>
-         <StackCard src="/icons/code.svg">Frontend</StackCard>
+          {Object.entries(techStack).map(([domain,stack],index)=><StackCard index={index} key={domain} stack={stack} src={"/icons/"+domain.toLowerCase()+".svg"}>{domain}</StackCard> )}
+         
+         {/* <StackCard stack={techStack.fronted} src="/icons/database.svg">Backend</StackCard>
+         <StackCard stack={techStack.fronted} src="/icons/workflow.svg">Workflows</StackCard> */}
+         
         </ul>
       </section>
 
